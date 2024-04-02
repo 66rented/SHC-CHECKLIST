@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Machine Information Form</title>
+<style>
+    body {
+        font-family: 'Verdana', sans-serif;
+        margin: 0;
+        padding: 15px;
+    }
+    form {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }
+    th, td {
+        padding: 6px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+    th {
+        background-color: #f2f2f2;
+    }
+    input[type="radio"] {
+        margin-right: 10px;
+    }
+    button {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        display: block;
+        margin: 0 auto;
+    }
+    button:hover {
+        background-color: #0056b3;
+    }
+</style>
+</head>
+<body>
+
+<form id="machineForm">
+    <label for="driverName">Driver Name:</label>
+    <input type="text" id="driverName" name="driverName" required>
+
+    <label for="shuttleNumber">Shuttle Number:</label>
+    <input type="text" id="shuttleNumber" name="shuttleNumber" required>
+
+    <label for="shift">Shift:</label>
+    <input type="text" id="shift" name="shift" required>
+
+    <h2 style="text-align: center;  font-size: 20px;">Outside Review</h2>
+    <table>
+        <tr>
+            <th>Component</th>
+            <th>OK</th>
+            <th>NO</th>
+        </tr>
+        <tr>
+            <td>HIT/LEAK/DAMAGE</td>
+            <td><input type="radio" name="hitLeakDamageHorn" value="OK"></td>
+            <td><input type="radio" name="hitLeakDamageHorn" value="NO"></td>
+        </tr>
+        <tr>
+            <td>TYRES/WHEELS/PRESSURE</td>
+            <td><input type="radio" name="tyresWheelsPressureHorn" value="OK"></td>
+            <td><input type="radio" name="tyresWheelsPressureHorn" value="NO"></td>
+        </tr>
+        <tr>
+            <td>HYDRAULIC CILINDERS</td>
+            <td><input type="radio" name="hydraulicCilindersHorn" value="OK"></td>
+            <td><input type="radio" name="hydraulicCilindersHorn" value="NO"></td>
+        </tr>
+        <tr>
+            <td>BUFFER</td>
+            <td><input type="radio" name="bufferHorn" value="OK"></td>
+            <td><input type="radio" name="bufferHorn" value="NO"></td>
+        </tr>
+        <tr>
+            <td>TWIST-LOCKS</td>
+            <td><input type="radio" name="twistLocksHorn" value="OK"></td>
+            <td><input type="radio" name="twistLocksHorn" value="NO"></td>
+        </tr>
+        <tr>
+            <td>ROPE SPREADER</td>
+            <td><input type="radio" name="ropeSpreaderHorn" value="OK"></td>
+            <td><input type="radio" name="ropeSpreaderHorn" value="NO"></td>
+        </tr>
+        <tr>
+            <td>SPREADER STRUCTURE</td>
+            <td><input type="radio" name="spreaderStructureHorn" value="OK"></td>
+            <td><input type="radio" name="spreaderStructureHorn" value="NO"></td>
+        </tr>
+        <tr>
+            <td>ACCESS LADDER</td>
+            <td><input type="radio" name="accessLadderHorn" value="OK"></td>
+            <td><input type="radio" name="accessLadderHorn" value="NO"></td>
+        </tr>
+    </table>
+
+    <h2 style="text-align: center; font-size: 20px;">Cabin Review</h2>
+    <table>
+        <tr>
+            <th>Component</th>
+            <th>OK</th>
+            <th>NO</th>
+        </tr>
+        <tr>
+            <td>CLEANED CABIN</td>
+            <td><input type="radio" name="cleanedCabinHorn" value="OK"></td>
+            <td><input type="radio" name="cleanedCabinHorn" value="NO"></td>
+        </tr>
+        <tr>
+            <td>GLASS CLEAN/NODAMAGE</td>
+            <td><input type="radio" name="glassCleanNodamageHorn" value="OK"></td>
+            <td><input type="radio" name="glassCleanNodamageHorn" value="NO"></td>
+        </tr>
+        <tr>
+            <td>PLC/VMT</td>
+            <td><input type="radio" name="plcVmthorn" value="OK"></td>
+            <td><input type="radio" name="plcVmthorn" value="NO"></td>
+        </tr>
+        <tr>
+            <td>JOYSTICK</td>
+            <td><input type="radio" name="joystickHorn" value="OK"></td>
+            <td><input type="radio" name="joystickHorn" value="NO"></td>
+        </tr>
+        <tr>
+            <td>RADIO</td>
+            <td><input type="radio" name="radioHorn" value="OK"></td>
+            <td><input type="radio" name="radioHorn" value="NO"></td>
+        </tr>
+        <tr>
+            <td>SEATBELT</td>
+            <td><input type="radio" name="seatbeltHorn" value="OK"></td>
+            <td><input type="radio" name="seatbeltHorn" value="NO"></td>
+        </tr>
+        <tr>
+            <td>SEAT MECHANISM</td>
+            <td><input type="radio" name="seatMechanismHorn" value="OK"></td>
+            <td><input type="radio" name="seatMechanismHorn" value="NO"></td>
+        </tr>
+        <tr>
+            <td>HORN/LIGHTS</td>
+            <td><input type="radio" name="hornLightsHorn" value="OK"></td>
+            <td><input type="radio" name="hornLightsHorn" value="NO"></td>
+        </tr>
+        <tr>
+            <td>WIPERS</td>
+            <td><input type="radio" name="wipersHorn" value="OK"></td>
+            <td><input type="radio" name="wipersHorn" value="NO"></td>
+        </tr>
+    </table>
+
+    <h2 style="text-align: center; font-size: 20px;">Operational Verification</h2>
+
+    <table>
+        <tr>
+            <th>Component</th>
+            <th>OK</th>
+            <th>NO</th>
+        </tr>
+        <tr>
+            <td>HOIST & LOWER FORWARD & BACKWARD</td>
+            <td><input type="radio" name="hoistLowerForwardBackwardHorn" value="OK"></td>
+            <td><input type="radio" name="hoistLowerForwardBackwardHorn" value="NO"></td>
+        </tr>
+        <tr>
+            <td>SPREADER MODES</td>
+            <td><input type="radio" name="spreaderModesHorn" value="OK"></td>
+            <td><input type="radio" name="spreaderModesHorn" value="NO"></td>
+        </tr>
+        <tr>
+            <td>SHIFTING/CENTRING SPREADER</td>
+            <td><input type="radio" name="shiftingCentringSpreaderHorn" value="OK"></td>
+            <td><input type="radio" name="shiftingCentringSpreaderHorn" value="NO"></td>
+        </tr>
+        <tr>
+            <td>PARKING BRAKE</td>
+            <td><input type="radio" name="parkingBrakeHorn" value="OK"></td>
+            <td><input type="radio" name="parkingBrakeHorn" value="NO"></td>
+        </tr>
+        <tr>
+            <td>STEERING</td>
+            <td><input type="radio" name="steeringHorn" value="OK"></td>
+            <td><input type="radio" name="steeringHorn" value="NO"></td>
+        </tr>
+        <tr>
+            <td>ACCELERATOR</td>
+            <td><input type="radio" name="acceleratorHorn" value="OK"></td>
+            <td><input type="radio" name="acceleratorHorn" value="NO"></td>
+        </tr>
+        <tr>
+            <td>OPEN CLOSE TWISTLOCKS</td>
+            <td><input type="radio" name="openCloseTwistlocksHorn" value="OK"></td>
+            <td><input type="radio" name="openCloseTwistlocksHorn" value="NO"></td>
+        </tr>
+    </table>
+
+    <button type="button" onclick="sendWhatsAppMessage()">Send via WhatsApp</button>
+</form>
+
+<script>
+    function sendWhatsAppMessage() {
+        var driverName = document.getElementById('driverName').value.trim();
+        var shuttleNumber = document.getElementById('shuttleNumber').value.trim();
+        var shift = document.getElementById('shift').value.trim();
+        var componentStatus = {};
+
+        // Get horn condition for each component
+        var components = document.querySelectorAll('input[type="radio"]');
+        components.forEach(function(component) {
+            if (component.checked) {
+                var componentName = component.name.replace('Horn', '');
+                componentStatus[componentName] = component.value;
+            }
+        });
+
+        // Create the message
+        var message = "Driver Name: " + driverName + "\n";
+        message += "Shuttle Number: " + shuttleNumber + "\n";
+        message += "Shift: " + shift + "\n\n";
+
+        message += "Outside Review:\n";
+        for (var component in componentStatus) {
+            message += "- " + component + ": " + componentStatus[component] + "\n";
+        }
+
+        // Encode message for WhatsApp link
+        message = encodeURIComponent(message);
+
+        // Generate WhatsApp link
+        var whatsappURL = "https://wa.me/?text=" + message;
+
+        // Open WhatsApp with the message
+        window.location.href = whatsappURL;
+    }
+</script>
+
+</body>
+</html>
