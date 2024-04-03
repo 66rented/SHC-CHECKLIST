@@ -30,6 +30,19 @@
     input[type="radio"] {
         margin-right: 10px;
     }
+    .input-group {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+    .input-group label {
+        flex: 1;
+        margin-right: 10px;
+    }
+    .input-group input {
+        flex: 2;
+    }
     button {
         padding: 10px 20px;
         background-color: #007bff;
@@ -47,16 +60,22 @@
 <body>
 
 <form id="machineForm">
-    <label for="driverName">Driver Name:</label>
-    <input type="text" id="driverName" name="driverName" required>
+    <div class="input-group">
+        <label for="driverName">Driver Name:</label>
+        <input type="text" id="driverName" name="driverName" required>
+    </div>
 
-    <label for="shuttleNumber">Shuttle Number:</label>
-    <input type="text" id="shuttleNumber" name="shuttleNumber" required>
+    <div class="input-group">
+        <label for="shuttleNumber">Shuttle Number:</label>
+        <input type="text" id="shuttleNumber" name="shuttleNumber" required>
+    </div>
 
-    <label for="shift">Shift:</label>
-    <input type="text" id="shift" name="shift" required>
+    <div class="input-group">
+        <label for="shift">Shift:</label>
+        <input type="text" id="shift" name="shift" required>
+    </div>
 
-    <h2 style="text-align: center;  font-size: 20px;">Outside Review</h2>
+    <h2 style="text-align: center; font-size: 20px;">Outside Review</h2>
     <table>
         <tr>
             <th>Component</th>
@@ -160,7 +179,6 @@
     </table>
 
     <h2 style="text-align: center; font-size: 20px;">Operational Verification</h2>
-
     <table>
         <tr>
             <th>Component</th>
@@ -168,9 +186,14 @@
             <th>NO</th>
         </tr>
         <tr>
-            <td>HOIST & LOWER FORWARD & BACKWARD</td>
-            <td><input type="radio" name="hoistLowerForwardBackwardHorn" value="OK"></td>
-            <td><input type="radio" name="hoistLowerForwardBackwardHorn" value="NO"></td>
+            <td>HOIST & LOWER</td>
+            <td><input type="radio" name="hoistLowerHorn" value="OK"></td>
+            <td><input type="radio" name="hoistLowerHorn" value="NO"></td>
+        </tr>
+        <tr>
+            <td>FORWARD & BACKWARD</td>
+            <td><input type="radio" name="forwardBackwardHorn" value="OK"></td>
+            <td><input type="radio" name="forwardBackwardHorn" value="NO"></td>
         </tr>
         <tr>
             <td>SPREADER MODES</td>
